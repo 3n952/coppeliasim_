@@ -1,9 +1,9 @@
 import time
-from zmqRemoteApi import RemoteAPIClient
+from coppeliasim_zmqremoteapi_client import RemoteAPIClient
 
 # CoppeliaSim과의 Remote API 연결 설정
 client = RemoteAPIClient()
-sim = client.getObject('sim')
+sim = client.require('sim')
 
 # 비전 센서 핸들 가져오기
 vision_sensor_handle = sim.getObject('/Vision_sensor')
